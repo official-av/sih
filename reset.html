@@ -4,16 +4,13 @@
 <head>
 
 	<!-- Title -->
-	<title>Ministry Web Portal | Login - Forgot Password</title>
+	<title>Ministry Web Portal| Login - Sign in</title>
 
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	<meta charset="UTF-8">
-	<meta name="description" content="Admin Dashboard Template" />
-	<meta name="keywords" content="admin,dashboard" />
-	<meta name="author" content="Steelcoders" />
 
 	<!-- Styles -->
-	<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
 	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="assets/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
 	<link href="assets/plugins/line-icons/simple-line-icons.css" rel="stylesheet" type="text/css" />
@@ -35,25 +32,34 @@
 
 </head>
 
-<body class="page-forgot">
+<body class="page-login">
 	<main class="page-content2">
 		<div class="page-inner2">
 			<div id="main-wrapper">
 				<div class="row">
 					<div class="col-md-3 center">
 						<div class="login-box">
-							<a href="index-2.html" class="logo-name text-lg text-center">Ministry Web Portal</a>
-							<p class="text-center m-t-md">Enter your e-mail address below to reset your password</p>
-							<form class="m-t-md" action="afterforgot.html">
-								<div class="form-group">
-									<input type="email" class="form-control" placeholder="Email" required>
+							<a href="" class="logo-name text-lg text-center">Ministry Web Portal</a>
+							<div class="panel-body">
+								<div role="tabpanel">
+
+									<p class="text-center m-t-md">Reset password for your account.</p>
+									<form class="m-t-md" action="login.html" method="post">
+										<div class="form-group">
+											<label for="exampleInputPassword1">Enter New Password</label>
+											<input type="password" class="form-control" name="exampleInputPassword1" id="exampleInputPassword1" placeholder="Password" required>
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control" name="exampleInputPassword2" id="exampleInputPassword2" placeholder="Confirm Password" required>
+										</div>
+										<button type="submit" class="btn btn-success btn-block">Submit</button>
+									</form>
 								</div>
-								<button type="submit" class="btn btn-success btn-block">Submit</button>
-								<a href="login.html" class="btn btn-default btn-block m-t-md">Back</a>
-							</form>
-							<p class="text-center m-t-xs text-sm">2017 &copy; Portal by The Resolution Squad.</p>
+								<p class="text-center m-t-xs text-sm">2017 &copy; Portal by The Resolution Squad.</p>
+							</div>
 						</div>
 					</div>
+
 				</div>
 				<!-- Row -->
 			</div>
@@ -67,7 +73,7 @@
 	<!-- Javascripts -->
 	<script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/js/modern.js"></script>
+	<script src="assets/js/modern.min.js"></script>
 
 </body>
 

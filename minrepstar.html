@@ -31,6 +31,8 @@
 	<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
 
 	<script src="assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
+	<script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+
 
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -56,10 +58,10 @@
 					<div class="logo-box hidden-xs">
 						<img src="assets/images/emb.png" style="height:120%">
 					</div>
-					<div class="logo-box">
+					<div class="logo-box hidden-xs" class="logocustpm">
 						<a href="index-2.html" class="logo-text"><span>Ministry Online Portal</span></a>
 					</div>
-					<div class="logo-central hidden-xs" id="logocustom">
+					<div class="logo-central">
 						<img src="assets/images/par.png" style="height:110%">
 					</div>
 
@@ -143,7 +145,7 @@
 				</div>
 			</div>
 			<div id="main-wrapper" class="container">
-				<form name="minrep" onsubmit="" action="">
+				<form name="minrep" onsubmit="">
 					<div class="row">
 						<div class="panel panel-default">
 							<div class="panel-heading clearfix">
@@ -173,44 +175,86 @@
 												<div class="row">
 													<label class="col-sm-2 control-label"><h3>Create Reply</h3></label>
 													<div class="col-sm-10">
-														<textarea class="form-control" name="colrep" rows="15"></textarea>
+														<textarea name="finalans" id="finalans" rows="15" style="width:100%" class="form-control"></textarea>
 													</div>
 												</div>
 												<h3>Select Replies from various ministries</h3>
-												<select class="js-states form-control" id="select_min" multiple="multiple" tabindex="-1" id="select_min" style="display: none; width: 100%">						<option value='elem_1'>elem 1</option>
+												<select class="js-states form-control" multiple="multiple" tabindex="-1" style="display: none; width: 100%">													<option value='elem_1'>elem 1</option>
 													<option value='elem_2'>elem 2</option>
 													<option value='elem_3'>elem 3</option>
 													<option value='elem_4'>elem 4</option>
 													...
 													<option value='elem_100'>elem 100</option>
 													</select>
-												<div class="col-md-7"><button type="button" onclick="adddomfunc();" class="btn btn-success btn-addon m-b-sm"><i class="fa fa-plus"></i> Add Inputs</button></div>
+												<div class="row">
+													<div class="col-md-7"><button type="button" onclick="adddomfunc();" class="btn btn-success btn-addon m-b-sm"><i class="fa fa-plus"></i> Add Inputs</button></div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="panel panel-default">
+															<div class="panel-heading" role="tab" id="headingTwo">
+																<h4 class="panel-title">
+																	<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+ Add Additional Question
+                                                        </a>
+																</h4>
+															</div>
+															<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																<div class="panel-body">
+																	<div class="row">
+																		<div class="col">
+																			<div class="form-group">
+																				<label for="input-Default" class="col-sm-2 control-label">Question:</label>
+																				<div class="col-sm-10">
+																					<textarea name="addques" rows="6" id="addques" style="width:100%"></textarea>
+																				</div>
+																			</div>
+
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col">
+																			<div class="form-group">
+																				<label for="input-Default" class="col-sm-2 control-label">Answer:</label>
+																				<div class="col-sm-10">
+																					<textarea name="addans" rows="6" id="addans" style="width:100%"></textarea>
+																				</div>
+																				<div class="col-md-4 offset-md-2">
+																					<button type="button" onclick="addquestion();" class="btn btn-success btn-addon m-b-sm"><i class="fa fa-plus"></i> Add Question</button></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div>
-								</div>
+
 								<div class="row">
 									<div class="col">
-										<button type="reset" class="btn btn-success col-md-2 col-md-offset-3">Clear Contents</button>
-										<button type="submit" class="btn btn-success col-md-2 col-md-offset-1">Submit Reply</button>
+										<button type="button" class="btn btn-success col-md-2 col-md-offset-3">Clear Contents</button>
+										<button type="button" class="btn btn-success col-md-2 col-md-offset-1">Submit Reply</button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</form>
-
-
-
-				<!-- Row -->
 			</div>
-			<!-- Main Wrapper -->
-			<div class="page-footer">
-				<div class="container">
-					<p class="no-s">2017 &copy; Portal by The Resolution Squad</p>
-				</div>
+
+
+
+			<!-- Row -->
+		</div>
+		<!-- Main Wrapper -->
+		<div class="page-footer">
+			<div class="container">
+				<p class="no-s">2017 &copy; Portal by The Resolution Squad</p>
 			</div>
 		</div>
 		<!-- Page Inner -->
@@ -221,7 +265,6 @@
 	<!-- Javascripts -->
 
 	<!-- Javascripts -->
-	<script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
 	<script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 	<script src="assets/plugins/pace-master/pace.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -235,10 +278,7 @@
 	<script src="assets/plugins/select2/js/select2.min.js"></script>
 	<script src="assets/js/pages/form-select2.js"></script>
 	<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
-	<script src="assets/js/pages/form-elements.js">
-
-
-	</script>
+	<script src="assets/js/pages/form-elements.js"></script>
 	<script src="assets/js/custom.js"></script>
 </body>
 

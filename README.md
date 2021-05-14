@@ -5,4 +5,4 @@ This is only the UI Layer part of the enitre solution.
 The API Layer and DB Layer for this solution based on python, django and postgres can be found here (https://github.com/official-av/sih-portal-prototype-api).
 
 Disclaimer:
-The code here is completely Open Source and fres to be re-used. This contains no confidential information/IP linkde to DST, GOI.
+The code here is completely Open Source and fres to be re-used. This contains no confidential information/IP linked to DST, GOI.
